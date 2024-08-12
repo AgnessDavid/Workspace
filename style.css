@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit",serif;
+}
+
+
+
+.so-icons ion-icon {
+    font-size: 50px;
+    color: rgb(43, 147, 198);
+    float: right;
+    margin-right: 60px;
+}
+
+.so-icon1 ion-icon {
+
+    font-size: 50px;
+    color: rgb(43, 147, 198);
+
+}
+
+.so-icon2 ion-icon {
+
+    font-size: 50px;
+    color: rgb(198, 43, 43);
+
+}
+
+.so-icon3 ion-icon {
+
+    font-size: 50px;
+    color: rgb(0, 251, 42);
+
+}
+
+.so-icon1,
+.so-icon2,
+.so-icon3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+.dames2 {
+    transition: .3s;
+}
+
+.dames2:hover {
+    transform: translateY(-5px);
+}
+
+
+.dames{
+    animation: dame  8s ease forwards;
+    opacity: 0;
+}
+
+
+@keyframes dame {
+
+    0%{
+    transform: translateX(-100px);
+    opacity: 0;
+    }
+    
+
+   100% {
+    transform: translateX(0px);
+    opacity: 1;
+        
+        
+}
+}
+
+
+.dames3 {
+animation: dam 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes dam {
+
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+
+    }
+}
+
+.dames4 {
+    animation: da 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes da {
+
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+
+
+    }
+}
+
+
+.dames5 {
+    animation: d 1s ease forwards;
+    opacity: 0;
+
+}
+
+
+
+@keyframes d {
+
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+
+    }
+}
+
+
+.dames6 {
+    transition: .3s;
+}
+
+.dames6:hover {
+    transform: translateY(-5px);
+}
+
+.dames7 {
+    transition: .3s;
+}
+.dames7:hover {
+   color: red;
+}
