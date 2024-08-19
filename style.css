@@ -17,21 +17,21 @@
 .so-icon1 ion-icon {
 
     font-size: 50px;
-    color: rgb(43, 147, 198);
+    color: rgb(255, 0, 0);
 
 }
 
 .so-icon2 ion-icon {
 
     font-size: 50px;
-    color: rgb(198, 43, 43);
+    color: #000000;
 
 }
 
 .so-icon3 ion-icon {
 
     font-size: 50px;
-    color: rgb(0, 251, 42);
+    color: #FFD700
 
 }
 
@@ -54,31 +54,9 @@
 }
 
 
-.dames{
-    animation: dame  8s ease forwards;
-    opacity: 0;
-}
-
-
-@keyframes dame {
-
-    0%{
-    transform: translateX(-100px);
-    opacity: 0;
-    }
-    
-
-   100% {
-    transform: translateX(0px);
-    opacity: 1;
-        
-        
-}
-}
-
 
 .dames3 {
-animation: dam 1s ease forwards;
+animation: dam 3s ease forwards;
     opacity: 0;
 }
 
@@ -98,15 +76,15 @@ animation: dam 1s ease forwards;
     }
 }
 
-.dames4 {
-    animation: da 1s ease forwards;
+.damesK {
+    animation: damg 5s ease forwards;
     opacity: 0;
 }
 
-@keyframes da {
+@keyframes damg {
 
     0% {
-        transform: translateX(-200px);
+        transform: translateX(-100px);
         opacity: 0;
     }
 
@@ -119,19 +97,15 @@ animation: dam 1s ease forwards;
     }
 }
 
-
-.dames5 {
-    animation: d 1s ease forwards;
+.damesg {
+    animation: damk 5s ease forwards;
     opacity: 0;
-
 }
 
-
-
-@keyframes d {
+@keyframes damk {
 
     0% {
-        transform: translateY(100px);
+        transform: translateY(-100px);
         opacity: 0;
     }
 
@@ -144,18 +118,25 @@ animation: dam 1s ease forwards;
     }
 }
 
-
 .dames6 {
     transition: .3s;
 }
 
 .dames6:hover {
-    transform: translateY(-5px);
+    transform: translateY(-12px);
+   
 }
 
-.dames7 {
-    transition: .3s;
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
 }
-.dames7:hover {
-   color: red;
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }

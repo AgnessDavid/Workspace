@@ -19,21 +19,91 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/bootstrap.css">
-
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style2.css">
 
   </head>
   <body>
+    
       
+  <div class="spinner-wrapper">
+  <div class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+  </div>
+  
+  </div>
+  
+  <script>
+  const spinnerWrapperEl = document.querySelector('.spinner-wrapper');
+
+window.addEventListener('load', () => {
+
+spinnerWrapperEl.style.opacity = '0';
+setTimeout(() => {
+
+spinnerWrapperEl.style.display ='none';
+
+}, 2000);
+
+});
+  
+  </script>
 
 
-<header class="navbar navbar-expand-lg navbar-dark bg-black container-fluid px-3">
-    <a href="#" class="navbar-brand dames5 ">
+
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Pour avoir de la place à scroller */
+            background-color: #f0f0f0;
+        }
+        .timeline-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .scroll-line {
+            height: 4px;
+            width: 0;
+            background-color: red;
+            transition: width 0.2s ease-out;
+        }
+    </style>
+
+
+
+<div class="timeline-container">
+    <div class="scroll-line"></div>
+</div>
+
+<script >
+    document.addEventListener("scroll", function() {
+    const scrollLine = document.querySelector('.scroll-line');
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+    // Met à jour la largeur de la ligne en fonction du pourcentage de défilement
+    scrollLine.style.width = scrollPercentage + '%';
+});
+
+</script>
+
+    
+
+
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-black container-fluid px-3">
+      <a href="#" class="navbar-brand damesg">
         <img src="Plan de travail 1.png" alt="photo" width="50px">
     </a>
 
-<span class="text-light ms-3 dames4 ">RESIDENCE EMMANUEL</span>
+<span class="text-light ms-3 damesK">RESIDENCE EMMANUEL</span>
 
 <button type="button" class="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbar-content">
 
@@ -48,9 +118,11 @@
 <nav class="collapse navbar-collapse" id="navbar-content">
     
     <ul class="navbar-nav nav-pills ms-auto">
-        <li class="nav-item"><a class="nav-link active d-flex align-items-center  justify-content-center dames3" href="#">Accuiel</a></li>
-        <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3 " href="index2.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3 " href="#">A propos</a></li>
+        <li class="nav-item"><a class="nav-link active d-flex align-items-center  justify-content-center dames3" href="index.html">Accueil</a></li>
+     
+        <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3" href="index3.html">A propos</a></li>
+        
+           <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3" href="index2.php">Contact</a></li>
     </ul>
 
 
@@ -58,6 +130,8 @@
 
 
 </header>
+
+   
 
 
 
@@ -107,14 +181,14 @@
 
     
     <!-------------------------------------- BOX-in-BOX -------------------------------------->
- <section style="background-color:rgba(241, 238, 238, 0.785);; min-height: 50vh; margin-bottom: 10px;">
+ <section style="background-color:rgba(241, 238, 238, 0.785);; min-height: 50vh; margin-bottom: 0px;">
 
 
-   <div class="container pt-5 dames ">
+   <div class="container pt-5">
    <h1 style="color: rgb(0, 0, 0);">Lorem ipsum dolor sit amet consectetur </h1>
    <div class="row g-3">
      
-   <div class="loop col-12 col-md-4 col-sm-4">
+   <div class="loop col-12 col-md-4 col-sm-12  hidden ">
   
        <div class="card col-12">
            <div class="so-icon1">
@@ -124,13 +198,13 @@
          <div class="card-body">
            <h5 class="card-title">Card title</h5>
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <button type="button" class="btn btn-primary">Primary</button>
+  
          </div>
      </div>
   
    </div>
    
-   <div class="col-12 col-md-4 col-sm-4">
+   <div class="col-12 col-md-4 col-sm-12 hidden ">
        <div class="card col-12">
            <div class="so-icon2">
                <ion-icon name="location-sharp"></ion-icon>
@@ -138,20 +212,20 @@
          <div class="card-body">
            <h5 class="card-title">Card title</h5>
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <button type="button" class="btn btn-outline-danger">Danger</button>
+  
          </div>
      </div>
    </div>
    
-   <div class="col-12 col-md-4 col-sm-4">
-       <div class="card col-12">
+   <div class="col-12 col-md-4 col-sm-12 hidden ">
+       <div class="card col-12 ">
            <div class="so-icon3">
                <ion-icon name="star-sharp"></ion-icon>
            </div>
          <div class="card-body">
            <h5 class="card-title">Card title</h5>
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <button type="button" class="btn btn-success">Primary</button>
+      
          </div>
      </div>
    </div>
@@ -169,35 +243,35 @@
    </center> 
          <hr class="featurette-divider">
          
-             <div class="row g-5">
-               <div class="col-md-7">
-                 <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-                 <p class="lead dames7">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-          
+           
+             <div class="row featurette hidden">
+               <div class=" col-sm-12  col-md-7">
+                 <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+                 <p class="lead dames7 ">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
                </div>
-
                <div class="col-md-5">
-                  <img src="image 1 (1).JPG" class="img-fluid dames6" alt="Maison" width="400px">
+                 <img src="image 1 (1).JPG" class="img-fluid dames6" alt="Maison" width="400px">
                </div>
              </div>
-         
+    
              <hr class="featurette-divider">
          
-             <div class="row featurette">
-               <div class="col-md-7 order-md-2">
+             <div class="row featurette hidden">
+               <div class=" col-sm-12  col-md-7 ">
                  <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
                  <p class="lead dames7">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
            
                </div>
-               <div class="col-md-5 order-md-1">
+
+               <div class="col-md-5 ">
                   <img src="image 1 (1).JPG" class="img-fluid dames6" alt="Maison" width="400px">
                </div>
              </div>
          
              <hr class="featurette-divider">
          
-             <div class="row featurette">
-               <div class="col-md-7">
+             <div class="row featurette hidden">
+               <div class=" col-sm-12  col-md-7">
                  <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
                  <p class="lead dames7 ">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
                </div>
@@ -208,9 +282,39 @@
     
        </div>
 
-    <hr>
- <!-------------------------------------- FOOTER -------------------------------------->
-    
+
+
+<script >
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+      
+      console.log(entry)
+      
+      if (entry.isIntersecting) {
+        
+entry.target.classList.add('show');
+
+   } else 
+
+   {
+    entry.target.classList.remove('show');
+  }
+
+    });
+  });
+
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+</script>
+
+
+
+<hr>
+<!-------------------------------------- FOOTER -------------------------------------->
+
 
 
 
@@ -222,15 +326,15 @@
       <div class="col-12  col-md-5 mb-3">
         <h3>RESIDENCE EMMANUEL</h3>
         <ul class="nav flex-column">
-         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary dames2 " style="font-size: 20px;">Accueil</a></li>
-            <li class="nav-item"><a href="index2.html" class="nav-link px-2 text-body-secondary dames2 " style="font-size: 20px;">Contact</a></li>
-            <li class="nav-item"><a href="index3.html" class="nav-link px-2 text-body-secondary dames2 " style="font-size: 20px;">A propos</a></li>
+         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary dames2" style="font-size: 20px;">Accueil</a></li>
+            <li class="nav-item"><a href="index3.html" class="nav-link px-2 text-body-secondary dames2" style="font-size: 20px;">A propos</a></li>
+              <li class="nav-item"><a href="index2.php" class="nav-link px-2 text-body-secondary dames2" style="font-size: 20px;" >Contact</a></li>
         </ul>
       </div>
 
       <div class="col-md-5 offset-md-1 mb-3">
        
-        <form>
+        <form action="index4.php" method="post">
 
           <h5>Subscribe to our newsletter</h5>
 
@@ -238,11 +342,12 @@
 
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
 
-            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <label for="email" class="visually-hidden">Email address</label>
 
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <input type="email" id="email" name="email" placeholder="Email address" required>
 
-            <button class="btn btn-primary" type="button">Subscribe</button>
+         
+              <button class="btn1" type="submit" value="Envoyer">Subscribe</button>
 
           </div>
         </form>
@@ -275,9 +380,8 @@
 
     <script src="js/bootstrap.js"></script>
     
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
-    </script>
 
   </body>
 </html>

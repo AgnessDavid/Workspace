@@ -1,55 +1,140 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>RESIDENCE EMMANUEL</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+     <link rel="apple-touch-icon" sizes="180x180" href="favicon/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+<link rel="manifest" href="favicon//site.webmanifest">
+<link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/bootstrap.css">
 
-    <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style3.css">
+<link rel="stylesheet" href="style2.css">
 
   </head>
   <body>
       
 
-  
-  <header class="navbar navbar-expand-lg navbar-dark bg-black container-fluid px-3">
-      <a href="#" class="navbar-brand dames5 ">
-          <img src="Plan de travail 1.png" alt="photo" width="50px">
-      </a>
-  
-  <span class="text-light ms-3 dames4 ">RESIDENCE EMMANUEL</span>
-  
-  <button type="button" class="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbar-content">
-  
-  <span class="navbar-toggler-icon">
-  
-  
-  </span>
-  
-  </button>
-  
-  
-  <nav class="collapse navbar-collapse" id="navbar-content">
+
+    
       
-      <ul class="navbar-nav nav-pills ms-auto">
-          <li class="nav-item"><a class="nav-link active d-flex align-items-center  justify-content-center dames3" href="index.html">Accuiel</a></li>
-          <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3 " href="index2.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3 " href="index3.html">A propos</a></li>
-      </ul>
+  <div class="spinner-wrapper">
+  <div class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+  </div>
   
+  </div>
   
-  </nav>
+  <script>
+  const spinnerWrapperEl = document.querySelector('.spinner-wrapper');
+
+window.addEventListener('load', () => {
+
+spinnerWrapperEl.style.opacity = '0';
+setTimeout(() => {
+
+spinnerWrapperEl.style.display ='none';
+
+}, 2000);
+
+});
   
+  </script>
+
   
-  </header>
-  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Pour avoir de la place à scroller */
+            background-color: #f0f0f0;
+        }
+        .timeline-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .scroll-line {
+            height: 4px;
+            width: 0;
+            background-color: red;
+            transition: width 0.2s ease-out;
+        }
+    </style>
+
+
+<div class="timeline-container">
+    <div class="scroll-line"></div>
+</div>
+
+<script >
+    document.addEventListener("scroll", function() {
+    const scrollLine = document.querySelector('.scroll-line');
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+    // Met à jour la largeur de la ligne en fonction du pourcentage de défilement
+    scrollLine.style.width = scrollPercentage + '%';
+});
+
+</script>
+
+
+
+
+
+
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-black container-fluid px-3">
+      <a href="#" class="navbar-brand damesg">
+        <img src="Plan de travail 1.png" alt="photo" width="50px">
+    </a>
+
+<span class="text-light ms-3 damesK">RESIDENCE EMMANUEL</span>
+
+<button type="button" class="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbar-content">
+
+<span class="navbar-toggler-icon">
+
+
+</span>
+
+</button>
+
+
+<nav class="collapse navbar-collapse" id="navbar-content">
+    
+    <ul class="navbar-nav nav-pills ms-auto">
+        <li class="nav-item"><a class="nav-link active d-flex align-items-center  justify-content-center dames3" href="index.html">Accueil</a></li>
+     
+        <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3" href="index3.html">A propos</a></li>
+        
+           <li class="nav-item"><a class="nav-link d-flex align-items-center  justify-content-center dames3" href="index2.php">Contact</a></li>
+    </ul>
+
+
+</nav>
+
+
+</header>
+
+   
+
 <!----------------------------------------------------------------------------------------------------------------->
   
   
@@ -79,7 +164,8 @@
 
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3  p-3">
-    <div class="bg-danger me-md-3 pt-3 px-3 pt-md-5 px-md-5  text-center rounded-5 g-3">
+
+    <div class="bg-secondary bg-opacity-25 me-md-3 pt-3 px-3 pt-md-5 px-md-5  text-center rounded-5 g-3 dames6">
       <div class="my-3 p-3 ">
         <h2 class="display-5">Another headline</h2>
         <p class="lead">And an even wittier subheading.</p>
@@ -89,7 +175,7 @@
       </div>
     </div>
 
-    <div class="text-bg-danger me-md-3 pt-3 px-5 pt-md-5 px-md-5 text-center rounded-5 g-3">
+    <div class="text-bg-danger me-md-3 pt-3 px-5 pt-md-5 px-md-5 text-center rounded-5 g-3 dames6 ">
       <div class="my-3 py-3">
         <h2 class="display-5">Another headline</h2>
         <p class="lead">And an even wittier subheading.</p>
@@ -101,17 +187,22 @@
   </div>
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 p-3">
-    <div class="bg-danger me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
 
-      <div class="container mb-5">
-        <img src="image 1 (1).JPG" alt="" height="500px" class="img-fluid">
+
+      <div class="bg-danger bg-opacity-90 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3 dames6">
+      
+        <div class="my-3 p-3">
+          <h2 class="display-5">Another headline</h2>
+          <p class="lead">And an even wittier subheading.</p>
+        </div>
+  
+        <div class="container mb-5">
+          <img src="image 1 (1).JPG" alt="" height="500px" class="img-fluid">
+        </div>
       </div>
-    </div>
-    <div class="bg-danger me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3">
+  
+
+    <div class="bg-secondary bg-opacity-25 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3 dames6 ">
       <div class="my-3 py-3">
         <h2 class="display-5">Another headline</h2>
         <p class="lead">And an even wittier subheading.</p>
@@ -123,7 +214,8 @@
   </div>
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 p-3">
-    <div class="bg-danger me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3">
+
+    <div class="bg-secondary bg-opacity-25 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3 dames6">
       <div class="my-3 p-3">
         <h2 class="display-5">Another headline</h2>
         <p class="lead">And an even wittier subheading.</p>
@@ -133,7 +225,7 @@
         <img src="image 1 (1).JPG" alt="" height="500px" class="img-fluid">
       </div>
     </div>
-    <div class="bg-danger me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3">
+    <div class="bg-danger bg-opacity-90 me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center rounded-5 g-3 dames6">
       <div class="my-3 py-3">
         <h2 class="display-5">Another headline</h2>
         <p class="lead">And an even wittier subheading.</p>
@@ -168,29 +260,34 @@
           <h3>RESIDENCE EMMANUEL</h3>
           <ul class="nav flex-column">
            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary dames2 " style="font-size: 20px;">Accueil</a></li>
-              <li class="nav-item"><a href="index2.html" class="nav-link px-2 text-body-secondary dames2 " style="font-size: 20px;">Contact</a></li>
+
               <li class="nav-item"><a href="index3.html" class="nav-link px-2 text-body-secondary dames2 " style="font-size: 20px;">A propos</a></li>
+
+       <li class="nav-item"><a href="index2.php" class="nav-link px-2 text-body-secondary dames2" style="font-size: 20px;">Contact</a></li>
+
           </ul>
         </div>
   
         <div class="col-md-5 offset-md-1 mb-3">
          
-          <form>
-  
-            <h5>Subscribe to our newsletter</h5>
-  
-            <p>Monthly digest of what's new and exciting from us.</p>
-  
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-  
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-  
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-  
-              <button class="btn btn-primary" type="button">Subscribe</button>
-  
-            </div>
-          </form>
+         <form action="index4.php" method="post">
+
+          <h5>Subscribe to our newsletter</h5>
+
+          <p>Monthly digest of what's new and exciting from us.</p>
+
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+
+            <label for="email" class="visually-hidden">Email address</label>
+
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+
+            
+              <button class="btn1" type="submit" value="Envoyer">Subscribe</button>
+
+          </div>
+        </form>
+
   
         </div>
       </div>
@@ -222,7 +319,7 @@
 
     <script src="js/bootstrap.js"></script>
     
-    <script type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"">
+    <script type="module" src ="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
 
     </script>
 
