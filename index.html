@@ -23,8 +23,32 @@
     <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="style2.css">
 
+
+
+
+
+    <script>
+        // Redirection si l'utilisateur essaie d'ouvrir le code source
+        document.addEventListener('keydown', function(event) {
+            // Vérifie si l'utilisateur a appuyé sur Ctrl + U
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault(); // Empêche l'action par défaut
+                window.location.href = 'autre_page.html'; // Redirige vers une autre page
+            }
+        });
+
+        // Code JavaScript intégré
+        ! function() {
+            var a = ["Hello", "World"];
+            console.log(a[0] + " " + a[1]);
+        }();
+    </script>
+
+
+
+
   </head>
-  <body>
+  <body oncontextmenu="return false;">
     
       
   <div class="spinner-wrapper">
